@@ -1,7 +1,5 @@
 # Amazon Data ETL Pipeline with Apache Airflow & Docker
 
-![ETL Pipeline Diagram](An_infographic_diagram_illustrates_an_ETL_(Extract.png)
-
 ## Table of Contents
 1. [Project Overview](#project-overview)
 2. [Architecture Diagram](#architecture-diagram)
@@ -22,7 +20,8 @@
 A Dockerized ETL pipeline using Apache Airflow to scrape book data from Amazon, transform it, and load into a PostgreSQL database.
 
 ## Architecture Diagram
-![ETL Pipeline Diagram](An_infographic_diagram_illustrates_an_ETL_(Extract.png)
+![image](https://github.com/user-attachments/assets/b18a8f91-bae3-4717-b2f8-663b18279e7c)
+
 
 ## Prerequisites
 - Docker Desktop (with Linux containers)
@@ -61,15 +60,13 @@ create_table: PostgresOperator creates the books table.
 insert_book_data: PythonOperator reads from XCom and inserts rows into Postgres.
 
 Directory Structure
-bash
-Copy
-Edit
+
 ├── dags/
-│   └── app.py              # Airflow DAG definition
+│ └── app.py              # Airflow DAG definition
 ├── logs/
 ├── plugins/
 ├── config/
-│   └── airflow.cfg
+ └── airflow.cfg
 ├── env/             # Python virtual environment
 ├── etl.py                  # Standalone ETL script for local testin
 ├── docker-compose.yaml
