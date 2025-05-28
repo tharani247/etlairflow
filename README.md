@@ -1,4 +1,4 @@
-# Twitter Data ETL Pipeline with Apache Airflow & Docker
+# Amazon Data ETL Pipeline with Apache Airflow & Docker
 
 ![ETL Pipeline Diagram](An_infographic_diagram_illustrates_an_ETL_(Extract.png)
 
@@ -50,9 +50,7 @@ Enable & trigger the fetch_and_store_amazon_books DAG.
 
 Monitor logs via:
 
-bash
-Copy
-Edit
+
 docker compose logs -f airflow-scheduler
 Airflow DAGs
 fetch_and_store_amazon_books
@@ -72,12 +70,12 @@ Edit
 ├── plugins/
 ├── config/
 │   └── airflow.cfg
-├── twitterenv/             # Python virtual environment
-├── etl.py                  # Standalone ETL script for local testing
-├── twitter_etl.py          # (if applicable)
+├── env/             # Python virtual environment
+├── etl.py                  # Standalone ETL script for local testin
 ├── docker-compose.yaml
 ├── README.md
 └── .env
+
 Troubleshooting
 Version warning: remove legacy version: attribute from compose file if prompted.
 
